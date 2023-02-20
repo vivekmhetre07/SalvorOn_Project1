@@ -1,14 +1,9 @@
+import { Directive, ElementRef } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, ElementRef, HostBinding } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Directive({
+  selector: '[appResponsive]'
 })
-export class AppComponent {
-  title = 'portfolio';
-  @HostBinding('class.pc') pcMode=false;
+export class ResponsiveDirective {
   constructor(
     private element: ElementRef,
     private breakpointObserver: BreakpointObserver
@@ -20,10 +15,10 @@ export class AppComponent {
           for (let breakpoint of Object.keys(result.breakpoints))
             if (result.breakpoints[breakpoint]) {
               if (breakpoint === Breakpoints.HandsetPortrait)
-                this.pcMode=false;
+                this.element.nativeElement.classList.remove('pc');
 
               if (breakpoint === Breakpoints.WebLandscape)
-                this.pcMode=true;
+                this.element.nativeElement.classList.add('pc');
             }
         },
       });

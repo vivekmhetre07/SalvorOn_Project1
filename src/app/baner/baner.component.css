@@ -1,0 +1,114 @@
+
+:host{
+    display: block;
+    padding: 4rem 2rem 6rem;
+    background-color: var(--gray-light);
+    clip-path: polygon(0% 0%,100% 0%,100% 95%,50% 100%,0% 95%);
+    padding: 4rem 2rem 10rem;
+    clip-path: polygon(0% 0%,100% 0%,100% 90%,50% 100%,0% 90%);
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+.title{
+    font-size: 4rem;
+    padding: 0rem 0rem 2rem;
+    text-align: center;
+    font-style: oblique;
+    color: brown;
+    text-decoration: dotted;
+    font-family: 'Roboto Condensed',sans-serif;
+    grid-column: 1/2;
+    padding: 0%;
+    margin: auto;
+    font-size: 5rem;
+    font-size: normal;
+    text-decoration: none;
+}
+.name
+{
+    grid-row: 3/4;
+    padding:2rem ;
+    color: purple;
+    font-size: 2rem;
+    margin-top: 3rem;
+    outline: 1px solid blue;
+    font-family: 'Roboto Condensed',sans-serif;
+    grid-row: 2/3;
+    width:600px;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+    height: max-content;
+}
+.name span:nth-of-type(1) span{
+    font-size: 3rem;
+    color:purple;
+}
+.name span:nth-of-type(2) {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: 8px;
+    text-shadow: 7px 9px 9px ;
+}
+.profile{
+    width: 200px;
+    height: 300px;
+    grid: 2/3;
+    margin: 0 auto;
+    position: relative;
+    clip: inset(0 round 50% 0 0);
+    grid-row: 1/3;
+    grid-column: 2/3;
+    width: 600px;
+    height: 600px;
+}
+.profile.profile-bg{
+    height: 75%;
+    width: 100%;
+    bottom: 0%;
+    position: absolute;
+    background-color: gray;
+    clip: inset(0 round 50% 0 0);
+}
+.profile img{
+    width: 100%;
+    height: 100%;
+}
+:host.pc{
+    padding: 4rem 2rem 10rem;
+    clip-path: polygon(0% 0%,100% 0%,100% 90%,50% 100%,0% 90%);
+}
+:host.pc.container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+:host.pc.title{
+    grid-column: 1/2;
+    padding: 0%;
+    margin: auto;
+    font-size: 5rem;
+    font-size: normal;
+    text-decoration: none;
+}
+:host.pc.profile{
+    grid-row: 1/3;
+    grid-column: 2/3;
+    width: 600px;
+    height: 600px;
+
+}
+:host.pc.name{
+    grid-row: 2/3;
+    width:600px;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+    height: max-content;
+}

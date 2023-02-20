@@ -1,0 +1,53 @@
+:host {
+    display: block;
+    color:darkviolet;
+    padding: 3rem 2rem;
+}
+
+ h2{
+    
+    position: relative;
+}
+ h4{
+    position: relative;
+    margin-left: 3rem;
+    color: crimson;
+}
+h5{
+    margin-left: 3rem;
+    color: darkslateblue;
+    margin-bottom: 3rem;
+}
+/* PC */
+:host.pc ul li:has(ul) {
+    width: max-content;
+    position: relative;
+    margin-left: 5rem;
+}
+
+:host.pc ul li:has(ul)::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -60px;
+    top: 5px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--green);
+}
+
+:host.pc ul li:has(ul)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 130%;
+    left: -50px;
+    top: 5%;
+    z-index: 1;
+    background-color: var(--gray-light);
+}
+
+:host.pc ul li:has(ul):last-child::after {  
+    height: 100%;
+}
