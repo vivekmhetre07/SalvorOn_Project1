@@ -21,7 +21,7 @@ export class ProjectsComponent implements OnInit {
       technologies: 'Angular,HTML,CSS,Typescript',
       description: [
         'Worked on Angular for making portfolio',
-        'Learned Htm,css,typescript to build it',
+        'Learned Html,css,typescript to build it',
         ],
     },
     {
