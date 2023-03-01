@@ -75,6 +75,12 @@
             "browserTarget": "portfolio:build"
           }
         },
+        "optimization": {
+          "scripts": true,
+          "styles": {
+            "minify": true,
+            "inlineCritical": false
+          },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -96,4 +102,5 @@
       }
     }
   }
+}
 }
